@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡Aventura Numérica con Dino! - Aprende los Números 1 al 10</title>
+    <title>¡Aventura Numérica con Copito! - Aprende los Números 1 al 10</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
@@ -605,23 +605,30 @@
         <!-- Pantalla de Inicio -->
         <div id="screen-home" class="screen active">
             <svg class="mascot-intro" viewBox="0 0 100 100">
-                <!-- Dino interactivo amigable -->
-                <ellipse cx="50" cy="55" rx="20" ry="25" fill="#4ade80" />
-                <circle cx="50" cy="30" r="16" fill="#4ade80" />
-                <path d="M 34 30 Q 30 55 45 75" fill="none" stroke="#22c55e" stroke-width="5" stroke-linecap="round" />
-                <circle cx="44" cy="26" r="3" fill="#0f172a" />
-                <circle cx="56" cy="26" r="3" fill="#0f172a" />
+                <!-- Copito el Conejito interactivo amigable -->
+                <ellipse cx="50" cy="65" rx="20" ry="22" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" />
+                <!-- Orejas -->
+                <ellipse cx="42" cy="22" rx="6" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" transform="rotate(-15 42 22)" />
+                <ellipse cx="42" cy="22" rx="3" ry="11" fill="#fbcfe8" transform="rotate(-15 42 22)" />
+                <ellipse cx="58" cy="22" rx="6" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" transform="rotate(15 58 22)" />
+                <ellipse cx="58" cy="22" rx="3" ry="11" fill="#fbcfe8" transform="rotate(15 58 22)" />
+                <!-- Cabeza -->
+                <circle cx="50" cy="44" r="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" />
+                <!-- Ojos -->
+                <circle cx="44" cy="41" r="3" fill="#0f172a" />
+                <circle cx="56" cy="41" r="3" fill="#0f172a" />
                 <!-- Mejillas rosadas -->
-                <circle cx="38" cy="32" r="2.5" fill="#f472b6" opacity="0.6" />
-                <circle cx="62" cy="32" r="2.5" fill="#f472b6" opacity="0.6" />
-                <!-- Sonrisa feliz -->
-                <path d="M 46 34 Q 50 39 54 34" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round" />
-                <!-- Púas de dinosaurio -->
-                <polygon points="50,14 47,8 53,8" fill="#f59e0b" />
-                <polygon points="38,20 32,16 35,23" fill="#f59e0b" />
-                <polygon points="62,20 68,16 65,23" fill="#f59e0b" />
+                <circle cx="38" cy="47" r="2.5" fill="#f472b6" opacity="0.6" />
+                <circle cx="62" cy="47" r="2.5" fill="#f472b6" opacity="0.6" />
+                <!-- Nariz -->
+                <polygon points="50,45 47,43 53,43" fill="#fda4af" />
+                <!-- Boca -->
+                <path d="M 46 47 Q 50 50 50 47 Q 50 50 54 47" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round" />
+                <!-- Patitas -->
+                <circle cx="38" cy="85" r="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" />
+                <circle cx="62" cy="85" r="5" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" />
             </svg>
-            <h2 class="instruction-text" style="font-size: 2.2rem; color: #0ea5e9;">¡Hola! Soy Dino. ¡Vamos a aprender y jugar con los números del 1 al 10!</h2>
+            <h2 class="instruction-text" style="font-size: 2.2rem; color: #0ea5e9;">¡Hola! Soy Copito. ¡Vamos a aprender y jugar con los números del 1 al 10!</h2>
             <button class="btn-play" onclick="startGame()">¡JUGAR!</button>
         </div>
 
@@ -642,13 +649,18 @@
             <!-- Mascota de feedback inferior -->
             <div class="dino-mascot-container">
                 <svg width="60" height="60" viewBox="0 0 100 100" id="dino-mascot">
-                    <ellipse cx="50" cy="55" rx="20" ry="25" fill="#4ade80" />
-                    <circle cx="50" cy="30" r="16" fill="#4ade80" />
-                    <circle cx="44" cy="26" r="3" fill="#0f172a" id="eye-l" />
-                    <circle cx="56" cy="26" r="3" fill="#0f172a" id="eye-r" />
-                    <path d="M 46 34 Q 50 39 54 34" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round" id="dino-mouth" />
-                    <!-- Púas de dinosaurio -->
-                    <polygon points="50,14 47,8 53,8" fill="#f59e0b" />
+                    <ellipse cx="50" cy="65" rx="20" ry="22" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" />
+                    <ellipse cx="42" cy="22" rx="6" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" transform="rotate(-15 42 22)" />
+                    <ellipse cx="42" cy="22" rx="3" ry="11" fill="#fbcfe8" transform="rotate(-15 42 22)" />
+                    <ellipse cx="58" cy="22" rx="6" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" transform="rotate(15 58 22)" />
+                    <ellipse cx="58" cy="22" rx="3" ry="11" fill="#fbcfe8" transform="rotate(15 58 22)" />
+                    <circle cx="50" cy="44" r="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" />
+                    <circle cx="44" cy="41" r="3" fill="#0f172a" id="eye-l" />
+                    <circle cx="56" cy="41" r="3" fill="#0f172a" id="eye-r" />
+                    <circle cx="38" cy="47" r="2.5" fill="#f472b6" opacity="0.6" />
+                    <circle cx="62" cy="47" r="2.5" fill="#f472b6" opacity="0.6" />
+                    <polygon points="50,45 47,43 53,43" fill="#fda4af" />
+                    <path d="M 46 47 Q 50 50 50 47 Q 50 50 54 47" fill="none" stroke="#0f172a" stroke-width="2" stroke-linecap="round" id="dino-mouth" />
                 </svg>
                 <div class="dino-speech" id="dino-feedback">¡Tú puedes! Cuenta con cuidado.</div>
             </div>
@@ -657,18 +669,19 @@
         <!-- Pantalla de Victoria / Recompensa -->
         <div id="screen-win" class="screen">
             <svg class="mascot-intro" viewBox="0 0 100 100" style="animation: bounce-mascot 1s ease infinite;">
-                <ellipse cx="50" cy="55" rx="20" ry="25" fill="#4ade80" />
-                <circle cx="50" cy="30" r="16" fill="#4ade80" />
-                <circle cx="42" cy="26" r="4" fill="#0f172a" />
-                <circle cx="58" cy="26" r="4" fill="#0f172a" />
+                <ellipse cx="50" cy="65" rx="20" ry="22" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" />
+                <ellipse cx="42" cy="22" rx="6" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" transform="rotate(-15 42 22)" />
+                <ellipse cx="42" cy="22" rx="3" ry="11" fill="#fbcfe8" transform="rotate(-15 42 22)" />
+                <ellipse cx="58" cy="22" rx="6" ry="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" transform="rotate(15 58 22)" />
+                <ellipse cx="58" cy="22" rx="3" ry="11" fill="#fbcfe8" transform="rotate(15 58 22)" />
+                <circle cx="50" cy="44" r="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="3" />
+                <circle cx="44" cy="41" r="3" fill="#0f172a" />
+                <circle cx="56" cy="41" r="3" fill="#0f172a" />
                 <!-- Boca super contenta -->
-                <path d="M 42 33 Q 50 45 58 33 Z" fill="#e11d48" stroke="#0f172a" stroke-width="2" />
-                <circle cx="38" cy="32" r="3" fill="#f472b6" opacity="0.8" />
-                <circle cx="62" cy="32" r="3" fill="#f472b6" opacity="0.8" />
-                <polygon points="50,14 47,8 53,8" fill="#f59e0b" />
-                <!-- Manos festejando -->
-                <path d="M 30 55 Q 20 40 15 45" fill="none" stroke="#4ade80" stroke-width="5" stroke-linecap="round" />
-                <path d="M 70 55 Q 80 40 85 45" fill="none" stroke="#4ade80" stroke-width="5" stroke-linecap="round" />
+                <path d="M 44 47 Q 50 56 56 47 Z" fill="#e11d48" stroke="#0f172a" stroke-width="2" />
+                <circle cx="38" cy="47" r="2.5" fill="#f472b6" opacity="0.8" />
+                <circle cx="62" cy="47" r="2.5" fill="#f472b6" opacity="0.8" />
+                <polygon points="50,45 47,43 53,43" fill="#fda4af" />
             </svg>
             <h2 class="win-title">¡Excelente Trabajo!</h2>
             <p class="instruction-text" style="color: #22c55e;">¡Has completado todos los niveles y eres un campeón de los números!</p>
@@ -729,19 +742,52 @@
         }
 
         // --- SISTEMA DE INSTRUCCIONES HABLADAS (Web Speech API) ---
-        let currentInstructionText = "¡Hola! Soy Dino. ¡Vamos a aprender y jugar con los números del 1 al 10!";
+        let currentInstructionText = "¡Hola! Soy Copito. ¡Vamos a aprender y jugar con los números del 1 al 10!";
         
+        // Inicializar voces
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.getVoices(); // Disparar carga de voces
+        }
+
+        function getBestSpanishVoice() {
+            if (!('speechSynthesis' in window)) return null;
+            const voices = window.speechSynthesis.getVoices();
+            const esVoices = voices.filter(voice => voice.lang.toLowerCase().startsWith('es'));
+            if (esVoices.length === 0) return null;
+            
+            // Voces preferidas por su tono dulce, femenino o amigable para niños
+            const preferredVoices = ['paulina', 'sabina', 'monica', 'google español', 'helena', 'natural'];
+            for (let pref of preferredVoices) {
+                const found = esVoices.find(v => v.name.toLowerCase().includes(pref));
+                if (found) return found;
+            }
+            
+            // Preferir voz de México si está disponible, luego España
+            const mxVoice = esVoices.find(v => v.lang.toLowerCase().includes('mx'));
+            if (mxVoice) return mxVoice;
+            
+            const esVoice = esVoices.find(v => v.lang.toLowerCase().includes('es'));
+            if (esVoice) return esVoice;
+            
+            return esVoices[0];
+        }
+
         function speak(text) {
             if ('speechSynthesis' in window) {
                 window.speechSynthesis.cancel(); // Cancelar cualquier voz activa
                 const utterance = new SpeechSynthesisUtterance(text);
-                utterance.lang = 'es-ES';
-                const voices = window.speechSynthesis.getVoices();
-                const esVoice = voices.find(voice => voice.lang.startsWith('es'));
-                if (esVoice) utterance.voice = esVoice;
                 
-                utterance.pitch = 1.3; // Voz más infantil/amigable
-                utterance.rate = 0.95;  // Velocidad adecuada para niños
+                const bestVoice = getBestSpanishVoice();
+                if (bestVoice) {
+                    utterance.voice = bestVoice;
+                    utterance.lang = bestVoice.lang;
+                } else {
+                    utterance.lang = 'es-MX'; // Fallback a español de México
+                }
+                
+                // Tono dulce e infantil (1.18 es un tono tierno sin llegar a distorsionar demasiado)
+                utterance.pitch = 1.18; 
+                utterance.rate = 0.90;  // Velocidad amigable y clara
                 window.speechSynthesis.speak(utterance);
             }
         }
@@ -785,7 +831,7 @@
             startGame();
         }
 
-        function setDinoMood(mood) {
+        function setMascotMood(mood) {
             const eyeL = document.getElementById('eye-l');
             const eyeR = document.getElementById('eye-r');
             const mouth = document.getElementById('dino-mouth');
@@ -794,22 +840,22 @@
             if (mood === 'happy') {
                 eyeL.setAttribute('r', '4');
                 eyeR.setAttribute('r', '4');
-                mouth.setAttribute('d', 'M 42 33 Q 50 45 58 33 Z');
+                mouth.setAttribute('d', 'M 44 47 Q 50 56 56 47 Z');
                 feedback.innerText = "¡SÍ! ¡Muy bien hecho!";
             } else if (mood === 'sad') {
                 eyeL.setAttribute('r', '2.5');
                 eyeR.setAttribute('r', '2.5');
-                mouth.setAttribute('d', 'M 44 38 Q 50 33 56 38');
+                mouth.setAttribute('d', 'M 46 49 Q 50 46 54 49');
                 feedback.innerText = "¡Oh! Inténtalo otra vez. ¡Tú puedes!";
             } else {
                 eyeL.setAttribute('r', '3');
                 eyeR.setAttribute('r', '3');
-                mouth.setAttribute('d', 'M 46 34 Q 50 39 54 34');
+                mouth.setAttribute('d', 'M 46 47 Q 50 50 50 47 Q 50 50 54 47');
             }
         }
 
         function loadQuestion() {
-            setDinoMood('normal');
+            setMascotMood('normal');
             
             const totalSteps = totalLevels * maxSubLevels;
             const currentStep = ((currentLevelIndex - 1) * maxSubLevels) + subLevelProgress;
@@ -1022,7 +1068,7 @@
 
         function triggerSuccess() {
             playSuccessSound();
-            setDinoMood('happy');
+            setMascotMood('happy');
             launchConfetti();
 
             subLevelProgress++;
@@ -1044,7 +1090,7 @@
 
         function triggerError() {
             playErrorSound();
-            setDinoMood('sad');
+            setMascotMood('sad');
         }
 
         const canvas = document.getElementById('confetti-canvas');
